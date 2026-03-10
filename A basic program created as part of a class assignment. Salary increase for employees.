@@ -26,7 +26,7 @@ elif salary <= 1500:
 elif salary > 1500:
     porcent = 5
 
-#calcular valor do almento
+#calcular valor do aumento
 increase = salary * porcent/100
 
 #calcular novo salario
