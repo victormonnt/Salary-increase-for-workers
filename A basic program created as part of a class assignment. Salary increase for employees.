@@ -1,0 +1,43 @@
+'''#11 As Organizações Hamurabi Medeiros resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram
+para desenvolver o programa que calculará os reajustes.
+• Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no
+salário atual:
+• salários até R$ 280,00 (incluindo) : aumento de 20%
+• salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+• salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+• salários de R$ 1500,00 em diante : aumento de 5%
+• Após o aumento ser realizado, informe na tela:
+• o salário antes do reajuste;
+• o percentual de aumento aplicado;
+• o valor do aumento;
+• o novo salário, após o aumento.'''
+
+salary = float(input("Enter your salary: "))
+
+#salvar salario antigo
+oldSalary = salary
+
+if salary <= 280:
+    porcent = 20
+elif salary <= 700:
+    porcent = 15
+elif salary <= 1500:
+    porcent = 10
+elif salary > 1500:
+    porcent = 5
+
+#calcular valor do almento
+increase = salary * porcent/100
+
+#calcular novo salario
+newSalary = salary + increase
+
+#arrendondar para 2 casas decimais
+increase = round(increase, 2)
+newSalary = round(newSalary, 2)
+
+#results
+print("Salary before reajust: ", salary)
+print("Porcent of reajust",str(porcent)+"%")
+print("Increase value",newSalary - salary)
+print("Salary after reajuste: ", newSalary)
